@@ -1,7 +1,7 @@
 function convertToRoman(num) {
   /* Make 2 arrays with corresponding decimal and roman numbers.
-       Adding numbers before a new roman number (4, 9...) significantly reduces code. 
-       Plus extra 'Infinity' value to find index for numbers higher than 1000. */
+     Adding numbers before a new roman number (4, 9...) significantly reduces code. 
+     Plus extra 'Infinity' value to find index for numbers higher than 1000. */
   const decimal = [
     1,
     4,
