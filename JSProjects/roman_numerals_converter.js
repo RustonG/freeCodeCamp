@@ -43,14 +43,14 @@ function convertToRoman(num) {
     let lowerRom = roman[lowerDec];
 
     /* 'rep' is a number of times 'lowerRom' goes into the number without number going negative.
-          So the loop builds a string out of roman values and at the same time reduces number by that value. */
+        So the loop builds a string out of roman values and at the same time reduces number by that value. */
     for (let i = 0, rep = Math.floor(num / decimal[lowerDec]); i < rep; i++) {
       str = str.concat(lowerRom);
       num -= decimal[lowerDec];
       console.log(num);
     }
     /* If at the end of the loop num is higher than zero, recursively return the function 
-          with new number and current built-up string. If number is zero, return the final string. */
+       with new number and current built-up string. If number is zero, return the final string. */
     if (num > 0) {
       return buildRomanStr(num, str);
     } else {
