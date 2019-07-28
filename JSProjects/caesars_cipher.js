@@ -3,7 +3,7 @@ function rot13(str) {
   const key = 13;
   let newstr = "";
   /* Loop through the str and if a char is alphabetic, modify it and then concat to newstr.
-       Else concat the char as is. */
+     Else concat the char as is. */
   for (let i = 0, n = str.length; i < n; i++) {
     let code = str.charCodeAt(i);
     // Alphabetic upper-cased check.
