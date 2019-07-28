@@ -1,4 +1,3 @@
-// TODO: Perhaps refactor the code by moving the variables into global scope and separating functions.
 function checkCashRegister(price, cash, cid) {
   // Make a copy of cid array to return in case of "CLOSED" status.
   const cidCopy = cid.map(arr => arr.slice());
@@ -20,6 +19,7 @@ function checkCashRegister(price, cash, cid) {
     // Find first currency unit higher than change and return its index - 1. That unit will be lower or equal to change.
     let currencyIndex = currency.findIndex(el => el > change) - 1;
 
+    // TODO: Reduce repetition on lines 24 and 32.
     // Call helper function to check if index is not -1.
     if (currencyIndex === -1) {
       resultObj.status = "INSUFFICIENT_FUNDS";
